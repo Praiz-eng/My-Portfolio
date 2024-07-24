@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="content-placeholder" style="width: 100%; position: absolute; z-index: 999;">
+        <div class="preloader" style="height: 1000vh; background-color: white; text-align: center; color: red;">
+        <img src="Skateboarding.gif" alt="">
+        </div>
+    </div>
+
+      <!-- Element to contain animated typing -->
+  <span id="element">khjgfhfhh</span>
+
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Hi My name is.</i>', '<i>&amp; a second sentence.</i>', '<i>hello my name is.</i>'],
+      typeSpeed: 30,
+    });
+    window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.preloader').style.display = 'none';
+
+                document.getElementById('content-placeholder').style.display = 'block';
+            }, 4000);
+        });
+  </script>
+</body>
+</body>
+</html>
